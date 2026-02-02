@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ali Shehzad — Automotive Engineer</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header id="header">
+  <h1>Ali Shehzad</h1>
+  <p>Automotive Engineer | Vehicle Systems | Simulation | Automotive Data</p>
+</header>
+
+<nav>
+  <button class="active" onclick="showSection('home', event)">Home</button>
+  <button onclick="showSection('experience', event)">Experience</button>
+  <button onclick="showSection('projects', event)">Projects</button>
+  <button onclick="showSection('skills', event)">Skills</button>
+  <button onclick="showSection('education', event)">Education</button>
+  <button onclick="showSection('certifications', event)">Certifications</button>
+  <button onclick="showSection('resume', event)">Resume</button>
+  <button onclick="showSection('contact', event)">Contact</button>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="active">
+  <h2>About Me</h2>
+  <p>
+    I am a final-year <strong>Automotive Engineering student</strong> with hands-on experience in vehicle systems,
+    diagnostics, and mechanical design. I have worked on internal combustion engines, braking systems, suspension,
+    and hybrid vehicle technologies through academic and industrial training.
+
+    I also have strong interest in <strong>automotive data analysis, safety engineering, and intelligent mobility</strong>.
+    Alongside automotive engineering, I bring DevOps and automation skills to support simulation workflows,
+    system deployment, and data-driven engineering projects.
+
+    My goal is to build a career in automotive engineering, vehicle safety, EV systems, and mobility technologies
+    while continuously improving engineering processes through modern tools and automation.
+  </p>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <h2>Education</h2>
+  <p>
+    <strong>University of Engineering and Technology (UET), Lahore</strong><br>
+    BSc. Automotive Engineering (Final Year)<br>
+    <em>2022 – Present</em>
+  </p>
+
+  <p>
+    <strong>The KIMS College, Chiniot</strong><br>
+    F.Sc Pre-Engineering (1001 / 1100)<br>
+    <em>2020 – 2022</em>
+  </p>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Experience</h2>
+
+  <p><strong>Daewoo Express — Automotive Internship</strong><br>
+     <em>Lahore, Pakistan | 4 Weeks</em>
+  </p>
+  <ul>
+    <li>Repaired and maintained diesel bus engines, suspension, braking, and transmission systems.</li>
+    <li>Diagnosed electrical faults and applied preventive maintenance to improve vehicle reliability.</li>
+    <li>Worked in fleet maintenance operations and safety inspection procedures.</li>
+  </ul>
+
+  <br>
+
+  <p><strong>Al Rehman Auto Workshop — Automotive Internship</strong><br>
+     <em>4 Weeks</em>
+  </p>
+  <ul>
+    <li>Worked on hybrid and electric vehicle systems, performing diagnostics and maintenance.</li>
+    <li>Assisted in repair and performance testing of modern vehicle components.</li>
+    <li>Gained exposure to EV subsystems and electronic vehicle architectures.</li>
+  </ul>
+
+  <br>
+
+  <p><strong>Home Tutor</strong><br>
+     <em>8 Months</em>
+  </p>
+  <ul>
+    <li>Helped students with daily lessons and exam preparation.</li>
+    <li>Improved student understanding and overall academic performance.</li>
+    <li>Developed strong communication and mentoring skills.</li>
+  </ul>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+
+  <h3>Automotive & Engineering Skills</h3>
+  <ul>
+    <li><strong>Mechanical Design:</strong> AutoCAD, SolidWorks</li>
+    <li><strong>Simulation & Analysis:</strong> ANSYS, Plant Simulation</li>
+    <li><strong>Engineering Tools:</strong> Excel, PowerPoint, MS Office</li>
+    <li><strong>Vehicle Systems:</strong> Engines, Braking, Suspension, Transmission</li>
+    <li><strong>Hybrid & EV Systems:</strong> Diagnostics, Maintenance, Safety Procedures</li>
+  </ul>
+
+  <h3>Data, Automation & DevOps (Supporting Skills)</h3>
+  <ul>
+    <li><strong>Operating System:</strong> Linux</li>
+    <li><strong>Cloud:</strong> AWS</li>
+    <li><strong>CI/CD:</strong> Jenkins, GitHub Actions</li>
+    <li><strong>Containerization:</strong> Docker</li>
+    <li><strong>Infrastructure as Code:</strong> Terraform</li>
+    <li><strong>Scripting:</strong> Python, Bash</li>
+  </ul>
+
+  <h3>Languages</h3>
+  <ul>
+    <li>English</li>
+    <li>Urdu</li>
+  </ul>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li>
+      <strong>An Interpretable Machine Learning Framework for Enhancing Road Transportation Safety (FYP)</strong><br>
+      Developed a machine learning model to analyze road accident data and predict crash severity to support
+      transportation safety planning and decision-making.
+    </li>
+
+    <li>
+      <strong>Motorcycle Electrical Wiring System Installation and Testing</strong><br>
+      Designed and tested complete motorcycle wiring systems with fault diagnosis and safety validation.
+    </li>
+
+    <li>
+      <strong>Rocker Arm Design, Simulation, and Stress Analysis</strong><br>
+      Designed rocker arm components using CAD and validated performance using stress and fatigue simulations.
+    </li>
+
+    <li>
+      <strong>V-Belt Pulley Design, Simulation, and CNC Machining</strong><br>
+      Designed pulley systems, performed simulations, and manufactured components using CNC machining processes.
+    </li>
+  </ul>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <h2>Certifications</h2>
+  <ul>
+    <li>Mastering 5S and Kaizen — Toyota NT (Dec 2023)</li>
+    <li>Personal Development for Planning Engineering — Open University</li>
+    <li>Assessing Risk in Engineering, Work and Life — Open University</li>
+    <li>Additive Manufacturing — Open University</li>
+    <li>Developing a Business Idea for Drone Technology — Open University</li>
+    <li>Automotive Industrial Engineering — Coursera</li>
+  </ul>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+  <h2>Resume</h2>
+  <div class="resume">
+    <a href="#" target="_blank">Download My Resume (PDF)</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact">
+    <p>Phone: <a href="tel:+923255723412">+92 325 5723412</a></p>
+    <p>Email: <a href="mailto:engralishehzad503@gmail.com">engralishehzad503@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/ali-shehzad-" target="_blank">linkedin.com/in/ali-shehzad-</a></p>
+  </div>
+</section>
+
+<footer id="footer">
+  © 2026 Ali Shehzad | Automotive Engineering Portfolio
+</footer>
+
+<script>
+  function showSection(id, event) {
+    document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+    document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+
+    const header = document.getElementById('header');
+    const footer = document.getElementById('footer');
+
+    if (id === 'home') {
+      header.classList.remove('hidden');
+      footer.classList.remove('hidden');
+    } else {
+      header.classList.add('hidden');
+      footer.classList.add('hidden');
+    }
+  }
+</script>
+
+</body>
+</html>
