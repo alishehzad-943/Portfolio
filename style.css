@@ -9,122 +9,84 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle at top, #0b1220, #020617);
-  color: #e5e7eb;
-  min-height: 100vh;
+  background: #f6f8fb;
+  color: #222;
+  line-height: 1.6;
 }
 
 /* =====================
-   HEADER (HERO)
+   HEADER
 ===================== */
 header {
-  background: linear-gradient(120deg, #020617, #020617),
-              radial-gradient(circle at top right, #38bdf8, transparent 60%);
-  background-blend-mode: screen;
+  background: #ffffff;
   text-align: center;
-  padding: 110px 20px 90px;
-  position: relative;
-  overflow: hidden;
+  padding: 70px 20px;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 header.hidden {
   display: none;
 }
 
-header::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, rgba(56,189,248,0.12), transparent);
-}
-
 header h1 {
-  font-size: 3.4rem;
+  font-size: 2.8rem;
   font-weight: 600;
-  letter-spacing: 1px;
-  color: #f8fafc;
-  position: relative;
-  z-index: 1;
+  color: #0f172a;
 }
 
 header p {
-  font-size: 1.35rem;
-  margin-top: 10px;
-  color: #93c5fd;
-  position: relative;
-  z-index: 1;
+  font-size: 1.2rem;
+  margin-top: 8px;
+  color: #475569;
 }
 
 /* =====================
    NAVBAR
 ===================== */
 nav {
-  background: rgba(2, 6, 23, 0.75);
-  backdrop-filter: blur(12px);
+  background: #ffffff;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   position: sticky;
   top: 0;
-  z-index: 20;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  z-index: 10;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 nav button {
   background: transparent;
   border: none;
-  color: #cbd5f5;
+  color: #334155;
   font-size: 0.95rem;
-  padding: 16px 22px;
+  padding: 14px 20px;
   cursor: pointer;
-  transition: 0.3s ease;
-  position: relative;
-  font-weight: 500;
-}
-
-nav button::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 6px;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #38bdf8, #6366f1);
-  transition: 0.35s ease;
-  transform: translateX(-50%);
-  border-radius: 999px;
-}
-
-nav button:hover::after,
-nav button.active::after {
-  width: 70%;
+  transition: 0.25s ease;
 }
 
 nav button:hover,
 nav button.active {
-  color: #38bdf8;
+  color: #2563eb;
+  border-bottom: 2px solid #2563eb;
 }
 
 /* =====================
-   SECTIONS (CARDS)
+   SECTIONS
 ===================== */
 section {
   display: none;
-  max-width: 1100px;
-  margin: 70px auto;
-  background: rgba(2, 6, 23, 0.7);
-  backdrop-filter: blur(18px);
-  padding: 55px 55px;
-  border-radius: 22px;
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow:
-    0 30px 60px rgba(0,0,0,0.55),
-    inset 0 0 0 1px rgba(255,255,255,0.02);
-  animation: fadeUp 0.7s ease;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  animation: fade 0.4s ease;
 }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(18px); }
+@keyframes fade {
+  from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -136,82 +98,47 @@ section.active {
    HEADINGS
 ===================== */
 h2 {
-  font-size: 1.7rem;
-  margin-bottom: 22px;
-  color: #f8fafc;
-  position: relative;
-  padding-bottom: 10px;
-}
-
-h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 70px;
-  height: 3px;
-  background: linear-gradient(90deg, #38bdf8, #6366f1);
-  border-radius: 999px;
+  color: #0f172a;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 6px;
 }
 
 h3 {
-  margin-top: 28px;
-  margin-bottom: 12px;
-  color: #93c5fd;
-  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #1e293b;
 }
 
 /* =====================
    TEXT
 ===================== */
 p {
-  line-height: 1.8;
-  color: #dbeafe;
-  font-size: 0.98rem;
+  color: #334155;
 }
 
 /* =====================
-   LISTS (CARDS)
+   LISTS
 ===================== */
 ul {
   list-style: none;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 li {
-  margin: 12px 0;
-  padding: 16px 18px;
-  background: linear-gradient(135deg, rgba(15,23,42,0.8), rgba(2,6,23,0.9));
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.06);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-  transition: 0.35s ease;
-  position: relative;
-}
-
-li::before {
-  content: "";
-  position: absolute;
-  left: -1px;
-  top: 12px;
-  bottom: 12px;
-  width: 4px;
-  background: linear-gradient(180deg, #38bdf8, #6366f1);
-  border-radius: 999px;
-}
-
-li:hover {
-  transform: translateY(-4px) scale(1.01);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+  margin: 8px 0;
+  padding: 12px 14px;
+  background: #f8fafc;
+  border-left: 4px solid #2563eb;
+  border-radius: 6px;
 }
 
 /* =====================
    LINKS
 ===================== */
 a {
-  color: #38bdf8;
+  color: #2563eb;
   text-decoration: none;
-  font-weight: 500;
 }
 
 a:hover {
@@ -223,45 +150,41 @@ a:hover {
 ===================== */
 .resume {
   text-align: center;
-  margin-top: 35px;
+  margin-top: 20px;
 }
 
 .resume a {
-  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  background: #2563eb;
   color: white;
-  padding: 14px 38px;
-  border-radius: 999px;
+  padding: 11px 24px;
+  border-radius: 6px;
   display: inline-block;
   font-size: 0.95rem;
-  letter-spacing: 0.4px;
-  transition: 0.35s ease;
-  box-shadow: 0 12px 30px rgba(99,102,241,0.35);
+  transition: 0.25s ease;
 }
 
 .resume a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 18px 45px rgba(99,102,241,0.55);
+  background: #1d4ed8;
 }
 
 /* =====================
    CONTACT
 ===================== */
 .contact p {
-  margin: 12px 0;
-  font-size: 0.95rem;
+  margin: 8px 0;
 }
 
 /* =====================
    FOOTER
 ===================== */
 footer {
-  background: rgba(2, 6, 23, 0.9);
-  color: #94a3b8;
+  background: #ffffff;
+  color: #64748b;
   text-align: center;
-  padding: 20px;
-  margin-top: 60px;
+  padding: 14px;
+  margin-top: 40px;
   font-size: 0.85rem;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid #e5e7eb;
 }
 
 footer.hidden {
@@ -272,8 +195,7 @@ footer.hidden {
    RESPONSIVE
 ===================== */
 @media (max-width: 768px) {
-  header h1 { font-size: 2.3rem; }
-  header p { font-size: 1.1rem; }
-  nav button { padding: 11px 14px; font-size: 0.85rem; }
-  section { margin: 30px 14px; padding: 30px; }
+  header h1 { font-size: 2.1rem; }
+  nav button { padding: 10px 14px; font-size: 0.85rem; }
+  section { margin: 20px 10px; padding: 25px; }
 }
