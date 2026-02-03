@@ -29,40 +29,37 @@
 <!-- HOME -->
 <section id="home" class="active">
   <h2>About Me</h2>
-<p>
-  I am an <strong>Automotive Engineering graduate</strong> with hands-on experience in vehicle maintenance,
-  diagnostics, and mechanical systems. I enjoy learning new skills and solving real-world automotive problems.
+  <p>
+    I am an <strong>Automotive Engineering graduate</strong> with hands-on experience in vehicle maintenance,
+    diagnostics, and mechanical systems. I enjoy learning new skills and solving real-world automotive problems.
 
-  I also have a strong interest in <strong>software and data-based work</strong>, especially in automotive safety,
-  simulations, and intelligent mobility. I use tools like automation, data analysis, and cloud systems to improve
-  engineering workflows.
+    I also have a strong interest in <strong>software and data-based work</strong>, especially in automotive safety,
+    simulations, and intelligent mobility. I use tools like automation, data analysis, and cloud systems to improve
+    engineering workflows.
 
-  My goal is to grow professionally in automotive engineering, EV systems, and mobility technologies while using
-  modern software tools to build smarter and more efficient solutions.
-</p>
+    My goal is to grow professionally in automotive engineering, EV systems, and mobility technologies while using
+    modern software tools to build smarter and more efficient solutions.
+  </p>
 </section>
 
 <!-- EDUCATION -->
 <section id="education">
   <h2>Education</h2>
 
-  <p style="margin-bottom:20px;">
+  <p style="margin-bottom:22px;">
     <strong>University of Engineering and Technology (UET), Lahore</strong>
     <span style="float:right;">Lahore, Pakistan</span><br>
     BSc Automotive Engineering (Final Year)
     <span style="float:right;">2022 – Present</span>
   </p>
 
-  <p style="margin-top:20px;">
+  <p style="margin-top:22px;">
     <strong>The KIMS College, Chiniot</strong>
     <span style="float:right;">Chiniot, Pakistan</span><br>
     F.Sc Pre-Engineering (1001 / 1100)
     <span style="float:right;">2020 – 2022</span>
   </p>
 </section>
-
-
-
 
 <!-- EXPERIENCE -->
 <section id="experience">
@@ -81,7 +78,7 @@
   <br>
 
   <p><strong>Al Rehman Auto Workshop — Automotive Engineering Intern</strong><br>
-     <em>4 Weeks</em>
+     <em>Gujranwala, Pakistan | 4 Weeks</em>
   </p>
   <ul>
     <li>Worked on hybrid and electric vehicle systems.</li>
@@ -89,9 +86,7 @@
     <li>Helped test vehicle performance and components.</li>
     <li>Learned modern automotive and EV technologies.</li>
   </ul>
-
 </section>
-
 
 <!-- SKILLS -->
 <section id="skills">
@@ -116,12 +111,10 @@
   </ul>
 </section>
 
-
 <!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
   <ul>
-
     <li>
       <strong>Machine Learning Based Crash Severity Injury Prediction (Final Year Project)</strong><br>
       Built a classification model to predict accident injury severity using road crash data to support
@@ -142,7 +135,6 @@
       <strong>V-Belt Pulley Design, Simulation, and CNC Machining</strong><br>
       Designed pulley systems, simulated performance, and manufactured parts using CNC machines.
     </li>
-
   </ul>
 </section>
 
@@ -187,7 +179,8 @@
     document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
     document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
 
-    document.getElementById(id).classList.add('active');
+    const activeSection = document.getElementById(id);
+    activeSection.classList.add('active');
     event.target.classList.add('active');
 
     const header = document.getElementById('header');
@@ -200,7 +193,24 @@
       header.classList.add('hidden');
       footer.classList.add('hidden');
     }
+
+    animateListItems(activeSection);
   }
+
+  function animateListItems(section) {
+    const items = section.querySelectorAll("li");
+    items.forEach((li, index) => {
+      li.classList.remove("show");
+      setTimeout(() => {
+        li.classList.add("show");
+      }, index * 120);
+    });
+  }
+
+  // Animate default home section on load
+  window.onload = () => {
+    animateListItems(document.querySelector(".active"));
+  };
 </script>
 
 </body>
