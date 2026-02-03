@@ -31,7 +31,7 @@ header {
   background: linear-gradient(135deg, #0f1f3a, #162c4f);
   color: #ffffff;
   text-align: center;
-  padding: 75px 20px;
+  padding: 80px 20px 60px;
 }
 
 header.hidden {
@@ -39,14 +39,19 @@ header.hidden {
 }
 
 header h1 {
-  font-size: 2.9rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 
-header p {
-  font-size: 1.15rem;
-  margin-top: 6px;
-  opacity: 0.85;
+.subtitle-box {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 22px;
+  background: #0b1d3a;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  letter-spacing: 0.4px;
+  color: #e0e7ff;
 }
 
 /* =====================
@@ -72,22 +77,18 @@ nav button {
   cursor: pointer;
   transition: 0.25s ease;
   position: relative;
+  border-radius: 6px;
 }
 
-nav button:hover,
-nav button.active {
+nav button:hover {
+  background: #eef2ff;
   color: #1e40af;
 }
 
-nav button.active::after {
-  content: "";
-  position: absolute;
-  left: 20%;
-  bottom: 6px;
-  width: 60%;
-  height: 2px;
-  background: #1e40af;
-  border-radius: 2px;
+nav button.active {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.25);
 }
 
 /* =====================
@@ -152,34 +153,52 @@ p {
 }
 
 /* =====================
-   LISTS (RECTANGLE CARDS)
+   CARD SYSTEM (RECTANGLES)
 ===================== */
-ul {
-  list-style: none;
-  margin-top: 12px;
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
 }
 
-li {
-  margin: 10px 0;
-  padding: 14px 16px;
+.card {
   background: #f8fafc;
-  border-left: 4px solid #1e40af;
-  border-radius: 8px;
-  color: #1f2937;
-  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #1e40af;
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.05);
 
   opacity: 0;
   transform: translateY(18px);
   transition: all 0.5s ease;
 }
 
-li.show {
+.card.show {
   opacity: 1;
   transform: translateY(0);
 }
 
+.card-title {
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.card-meta {
+  font-size: 0.85rem;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: #334155;
+}
+
 /* =====================
-   EDUCATION CARDS
+   EDUCATION
 ===================== */
 .education-card {
   background: #f8fafc;
@@ -244,13 +263,6 @@ a:hover {
 }
 
 /* =====================
-   CONTACT
-===================== */
-.contact p {
-  margin: 10px 0;
-}
-
-/* =====================
    FOOTER
 ===================== */
 footer {
@@ -270,7 +282,7 @@ footer.hidden {
    RESPONSIVE
 ===================== */
 @media (max-width: 768px) {
-  header h1 { font-size: 2.1rem; }
+  header h1 { font-size: 2.2rem; }
   nav button { padding: 10px 14px; font-size: 0.85rem; }
   section { margin: 22px 12px; padding: 26px; }
   .education-row { flex-direction: column; gap: 4px; }
@@ -281,7 +293,7 @@ footer.hidden {
 
 <header id="header">
   <h1>Ali Shehzad</h1>
-  <p>Automotive Engineer 26'</p>
+  <div class="subtitle-box">Automotive Engineer 26'</div>
 </header>
 
 <nav>
@@ -344,90 +356,75 @@ footer.hidden {
 <section id="experience">
   <h2>Experience</h2>
 
-  <p><strong>Daewoo Express — Automotive Engineering Intern</strong><br>
-     <em>Lahore, Pakistan | 4 Weeks</em>
-  </p>
-  <ul>
-    <li>Worked on diesel bus engines and vehicle maintenance.</li>
-    <li>Checked braking, suspension, and transmission systems.</li>
-    <li>Found and fixed basic electrical faults.</li>
-    <li>Learned vehicle inspection and safety procedures.</li>
-  </ul>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-title">Daewoo Express — Automotive Engineering Intern</div>
+      <div class="card-meta">Lahore, Pakistan | July 2025 – August 2025</div>
+      <div class="card-desc">Worked on diesel bus engines, braking, suspension, transmission systems, and vehicle inspections.</div>
+    </div>
 
-  <br>
-
-  <p><strong>Al Rehman Auto Workshop — Automotive Engineering Intern</strong><br>
-     <em>Gujranwala, Pakistan | 4 Weeks</em>
-  </p>
-  <ul>
-    <li>Worked on hybrid and electric vehicle systems.</li>
-    <li>Assisted in vehicle diagnostics and repairs.</li>
-    <li>Helped test vehicle performance and components.</li>
-    <li>Learned modern automotive and EV technologies.</li>
-  </ul>
+    <div class="card">
+      <div class="card-title">Al Rehman Auto Workshop — Automotive Engineering Intern</div>
+      <div class="card-meta">Gujranwala, Pakistan | June 2025 – July 2025</div>
+      <div class="card-desc">Worked on hybrid and EV systems, diagnostics, repairs, and modern vehicle technologies.</div>
+    </div>
+  </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
   <h2>Skills</h2>
 
-  <h3>Engineering & Software Tools</h3>
-  <ul>
-    <li><strong>AutoCAD</strong> — 2D drafting and engineering drawings</li>
-    <li><strong>SolidWorks</strong> — 3D modeling and mechanical design</li>
-    <li><strong>ANSYS</strong> — Structural and thermal simulation analysis</li>
-    <li><strong>Plant Simulation</strong> — Manufacturing and process simulation</li>
-    <li><strong>Excel</strong> — Data analysis, calculations, and reporting</li>
-    <li><strong>PowerPoint</strong> — Technical presentations and project slides</li>
-    <li><strong>MS Office</strong> — Documentation, reports, and professional work</li>
-  </ul>
-
-  <h3>Languages</h3>
-  <ul>
-    <li>Urdu (Native/Bilingual)</li>
-    <li>English (Professional Working Proficiency)</li>
-    <li>Chinese (Elementary)</li>
-  </ul>
+  <div class="card-grid">
+    <div class="card"><div class="card-title">AutoCAD</div><div class="card-desc">2D drafting and engineering drawings</div></div>
+    <div class="card"><div class="card-title">SolidWorks</div><div class="card-desc">3D modeling and mechanical design</div></div>
+    <div class="card"><div class="card-title">ANSYS</div><div class="card-desc">Structural and thermal simulations</div></div>
+    <div class="card"><div class="card-title">Plant Simulation</div><div class="card-desc">Manufacturing and process modeling</div></div>
+    <div class="card"><div class="card-title">Excel</div><div class="card-desc">Data analysis and reporting</div></div>
+    <div class="card"><div class="card-title">PowerPoint</div><div class="card-desc">Technical presentations</div></div>
+    <div class="card"><div class="card-title">MS Office</div><div class="card-desc">Professional documentation</div></div>
+  </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
-  <ul>
-    <li>
-      <strong>Machine Learning Based Crash Severity Injury Prediction (Final Year Project)</strong><br>
-      Built a classification model to predict accident injury severity using road crash data to support
-      transportation safety analysis and decision-making.
-    </li>
 
-    <li>
-      <strong>Motorcycle Electrical Wiring System Installation and Testing</strong><br>
-      Designed and tested a complete motorcycle wiring system with fault checking and safety validation.
-    </li>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-title">Crash Severity Injury Prediction (FYP)</div>
+      <div class="card-desc">Built ML classification model to predict accident injury severity using road crash datasets.</div>
+    </div>
 
-    <li>
-      <strong>Rocker Arm Design, Simulation, and Stress Analysis</strong><br>
-      Designed mechanical components and tested strength using simulation tools.
-    </li>
+    <div class="card">
+      <div class="card-title">Motorcycle Electrical Wiring System</div>
+      <div class="card-desc">Designed and tested complete motorcycle wiring with fault detection and safety validation.</div>
+    </div>
 
-    <li>
-      <strong>V-Belt Pulley Design, Simulation, and CNC Machining</strong><br>
-      Designed pulley systems, simulated performance, and manufactured parts using CNC machines.
-    </li>
-  </ul>
+    <div class="card">
+      <div class="card-title">Rocker Arm Design & Stress Analysis</div>
+      <div class="card-desc">Designed mechanical components and validated strength through simulations.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">V-Belt Pulley Design & CNC Machining</div>
+      <div class="card-desc">Designed pulley system, simulated performance, and manufactured using CNC machines.</div>
+    </div>
+  </div>
 </section>
 
 <!-- CERTIFICATIONS -->
 <section id="certifications">
   <h2>Certifications</h2>
-  <ul>
-    <li>Mastering 5S and Kaizen — Toyota NT (Dec 2023)</li>
-    <li>Personal Development for Planning Engineering — Open University</li>
-    <li>Assessing Risk in Engineering, Work and Life — Open University</li>
-    <li>Additive Manufacturing — Open University</li>
-    <li>Developing a Business Idea for Drone Technology — Open University</li>
-    <li>Automotive Industrial Engineering — Coursera</li>
-  </ul>
+
+  <div class="card-grid">
+    <div class="card"><div class="card-title">Mastering 5S and Kaizen</div><div class="card-desc">Toyota NT — Dec 2023</div></div>
+    <div class="card"><div class="card-title">Personal Development for Planning Engineering</div><div class="card-desc">Open University</div></div>
+    <div class="card"><div class="card-title">Assessing Risk in Engineering, Work and Life</div><div class="card-desc">Open University</div></div>
+    <div class="card"><div class="card-title">Additive Manufacturing</div><div class="card-desc">Open University</div></div>
+    <div class="card"><div class="card-title">Developing a Business Idea for Drone Technology</div><div class="card-desc">Open University</div></div>
+    <div class="card"><div class="card-title">Automotive Industrial Engineering</div><div class="card-desc">Coursera</div></div>
+  </div>
 </section>
 
 <!-- RESUME -->
@@ -441,11 +438,27 @@ footer.hidden {
 <!-- CONTACT -->
 <section id="contact">
   <h2>Contact Me</h2>
-  <div class="contact">
-    <p>Phone: <a href="tel:+923255723412">+92 325 5723412</a></p>
-    <p>Email: <a href="mailto:engralishehzad503@gmail.com">engralishehzad503@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/ali-shehzad-" target="_blank">linkedin.com/in/ali-shehzad-</a></p>
-    <p>GitHub: <a href="https://github.com/alishehzad-943" target="_blank">github.com/alishehzad-943</a></p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-title">Phone</div>
+      <div class="card-desc"><a href="tel:+923255723412">+92 325 5723412</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Email</div>
+      <div class="card-desc"><a href="mailto:engralishehzad503@gmail.com">engralishehzad503@gmail.com</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">LinkedIn</div>
+      <div class="card-desc"><a href="https://www.linkedin.com/in/ali-shehzad-" target="_blank">linkedin.com/in/ali-shehzad-</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">GitHub</div>
+      <div class="card-desc"><a href="https://github.com/alishehzad-943" target="_blank">github.com/alishehzad-943</a></div>
+    </div>
   </div>
 </section>
 
@@ -473,21 +486,21 @@ footer.hidden {
       footer.classList.add('hidden');
     }
 
-    animateListItems(activeSection);
+    animateCards(activeSection);
   }
 
-  function animateListItems(section) {
-    const items = section.querySelectorAll("li");
-    items.forEach((li, index) => {
-      li.classList.remove("show");
+  function animateCards(section) {
+    const cards = section.querySelectorAll(".card");
+    cards.forEach((card, index) => {
+      card.classList.remove("show");
       setTimeout(() => {
-        li.classList.add("show");
+        card.classList.add("show");
       }, index * 120);
     });
   }
 
   window.onload = () => {
-    animateListItems(document.querySelector(".active"));
+    animateCards(document.querySelector(".active"));
   };
 </script>
 
