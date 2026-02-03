@@ -1,3 +1,6 @@
+/* =====================
+   GLOBAL RESET
+===================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,16 +9,19 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f8fafc;
-  color: #222;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #e5e7eb;
+  min-height: 100vh;
 }
 
+/* =====================
+   HEADER
+===================== */
 header {
-  background: #0b1d39;
-  color: white;
+  background: linear-gradient(135deg, #020617, #020617);
   text-align: center;
-  padding: 70px 20px;
-  display: block;
+  padding: 90px 20px;
+  border-bottom: 2px solid #1f2933;
 }
 
 header.hidden {
@@ -23,53 +29,81 @@ header.hidden {
 }
 
 header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 3.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #f8fafc;
 }
 
 header p {
   font-size: 1.3rem;
-  opacity: 0.9;
+  margin-top: 8px;
+  color: #94a3b8;
 }
 
+/* =====================
+   NAVBAR
+===================== */
 nav {
-  background: #12294e;
+  background: #020617;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
+  border-bottom: 1px solid #1f2933;
 }
 
 nav button {
   background: transparent;
   border: none;
-  color: white;
-  font-size: 1rem;
-  padding: 15px 20px;
+  color: #cbd5f5;
+  font-size: 0.95rem;
+  padding: 14px 22px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  transition: 0.3s ease;
+}
+
+nav button:hover::after,
+nav button.active::after {
+  width: 100%;
 }
 
 nav button:hover,
 nav button.active {
-  background: #1d3b70;
+  color: #38bdf8;
 }
 
+/* =====================
+   SECTIONS
+===================== */
 section {
   display: none;
-  max-width: 1000px;
-  margin: 40px auto;
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  animation: fade 0.6s ease;
+  max-width: 1050px;
+  margin: 60px auto;
+  background: linear-gradient(135deg, #020617, #020617);
+  padding: 45px 45px;
+  border-radius: 16px;
+  border: 1px solid #1f2933;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  animation: fadeUp 0.6s ease;
 }
 
-@keyframes fade {
-  from { opacity: 0; transform: translateY(10px); }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -77,75 +111,122 @@ section.active {
   display: block;
 }
 
+/* =====================
+   HEADINGS
+===================== */
 h2 {
-  color: #0b1d39;
-  border-bottom: 2px solid #eee;
-  margin-bottom: 15px;
-  padding-bottom: 5px;
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+  color: #f8fafc;
+  border-left: 5px solid #38bdf8;
+  padding-left: 12px;
 }
 
+h3 {
+  margin-top: 22px;
+  margin-bottom: 10px;
+  color: #93c5fd;
+}
+
+/* =====================
+   TEXT
+===================== */
+p {
+  line-height: 1.7;
+  color: #cbd5f5;
+}
+
+/* =====================
+   LISTS
+===================== */
 ul {
   list-style: none;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 li {
   margin: 10px 0;
-  padding: 12px;
-  background: #f4f8ff;
-  border-left: 4px solid #0b1d39;
-  border-radius: 6px;
+  padding: 14px 16px;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 10px;
+  border-left: 4px solid #38bdf8;
+  transition: 0.25s ease;
 }
 
+li:hover {
+  transform: translateX(4px);
+  background: rgba(30, 41, 59, 0.95);
+}
+
+/* =====================
+   LINKS
+===================== */
 a {
-  color: #0b5ed7;
+  color: #38bdf8;
   text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
+/* =====================
+   RESUME BUTTON
+===================== */
 .resume {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .resume a {
-  background: #0b5ed7;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
   color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
+  padding: 13px 30px;
+  border-radius: 999px;
   display: inline-block;
-  text-align: center;
-  transition: 0.3s;
+  font-size: 0.95rem;
+  letter-spacing: 0.4px;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
 }
 
 .resume a:hover {
-  background: #083a8a;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px rgba(56, 189, 248, 0.5);
 }
 
+/* =====================
+   CONTACT
+===================== */
 .contact p {
-  margin: 8px 0;
-  font-size: 1rem;
+  margin: 10px 0;
+  font-size: 0.95rem;
 }
 
+/* =====================
+   FOOTER
+===================== */
 footer {
-  background: #0b1d39;
-  color: white;
+  background: #020617;
+  color: #94a3b8;
   text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-  font-size: 0.9rem;
-  display: block;
+  padding: 18px;
+  margin-top: 50px;
+  font-size: 0.85rem;
+  border-top: 1px solid #1f2933;
 }
 
 footer.hidden {
   display: none;
 }
 
+/* =====================
+   RESPONSIVE
+===================== */
 @media (max-width: 768px) {
   header h1 { font-size: 2.2rem; }
-  nav button { padding: 10px 15px; font-size: 0.9rem; }
-  section { margin: 20px 10px; padding: 25px; }
+  header p { font-size: 1.1rem; }
+  nav button { padding: 10px 14px; font-size: 0.85rem; }
+  section { margin: 25px 12px; padding: 28px; }
 }
