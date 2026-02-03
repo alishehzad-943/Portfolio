@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ali Shehzad — Automotive Engineer</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
-<style>
+  <style>
 /* =====================
-   GLOBAL RESET
+   RESET
 ===================== */
 * {
   margin: 0;
@@ -18,21 +18,20 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background: #f4f7fb;
-  color: #1f2937;
-  line-height: 1.7;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #eef3fb, #f7f9fc);
+  color: #1e293b;
+  line-height: 1.6;
 }
 
 /* =====================
    HEADER
 ===================== */
 header {
-  background: linear-gradient(135deg, #0b2a4a, #123c6a);
-  color: white;
+  background: linear-gradient(135deg, #0f1f3a, #162c4f);
+  color: #ffffff;
   text-align: center;
-  padding: 60px 20px 40px;
-  transition: 0.4s ease;
+  padding: 75px 20px;
 }
 
 header.hidden {
@@ -40,215 +39,244 @@ header.hidden {
 }
 
 header h1 {
-  font-size: 2.6rem;
+  font-size: 2.9rem;
   font-weight: 600;
 }
 
 header p {
-  margin-top: 8px;
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: #e6eef9;
+  font-size: 1.15rem;
+  margin-top: 6px;
+  opacity: 0.85;
 }
 
 /* =====================
    NAVBAR
 ===================== */
 nav {
-  background: white;
+  background: #ffffff;
   display: flex;
   justify-content: center;
-  gap: 10px;
-  padding: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  flex-wrap: wrap;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 10;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 nav button {
   background: transparent;
   border: none;
-  padding: 8px 16px;
+  color: #334155;
   font-size: 0.95rem;
+  padding: 14px 20px;
   cursor: pointer;
-  border-radius: 20px;
-  transition: 0.3s ease;
-  color: #1f2937;
+  transition: 0.25s ease;
+  position: relative;
 }
 
-nav button:hover {
-  background: #e6eef9;
-}
-
+nav button:hover,
 nav button.active {
-  background: #123c6a;
-  color: white;
+  color: #1e40af;
+}
+
+nav button.active::after {
+  content: "";
+  position: absolute;
+  left: 20%;
+  bottom: 6px;
+  width: 60%;
+  height: 2px;
+  background: #1e40af;
+  border-radius: 2px;
 }
 
 /* =====================
    SECTIONS
 ===================== */
 section {
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 0 20px;
   display: none;
+  max-width: 1000px;
+  margin: 45px auto;
+  background: #ffffff;
+  padding: 42px 44px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
+  animation: fade 0.4s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 section.active {
   display: block;
 }
 
-section h2 {
-  font-size: 1.9rem;
-  margin-bottom: 30px;
-  color: #0b2a4a;
-  text-align: center;
-}
-
 /* =====================
-   SECTION CONTAINER (Navy panels)
+   HEADINGS
 ===================== */
-.panel {
-  background: linear-gradient(135deg, #0b2a4a, #123c6a);
-  padding: 40px 25px;
-  border-radius: 20px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+h2 {
+  color: #0f172a;
+  margin-bottom: 18px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
 }
 
-/* =====================
-   CARD STYLE (White rectangles)
-===================== */
-.card {
-  background: white;
-  border-radius: 16px;
-  padding: 22px 24px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  margin-bottom: 22px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.6s ease;
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, #1e40af, #3b82f6);
+  border-radius: 3px;
 }
 
-.card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.card strong {
-  font-size: 1.05rem;
-  color: #0b2a4a;
-}
-
-.card .meta {
-  font-size: 0.9rem;
-  color: #6b7280;
-  margin: 6px 0 12px;
-}
-
-/* =====================
-   LINE BOX (for bullets)
-===================== */
-.line-box {
-  background: #f4f7fb;
-  padding: 10px 14px;
-  border-radius: 10px;
+h3 {
+  margin-top: 26px;
   margin-bottom: 10px;
-  font-size: 0.92rem;
-  color: #1f2937;
-  opacity: 0;
-  transform: translateY(25px);
-  transition: 0.5s ease;
-}
-
-.line-box.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* =====================
-   HOME ABOUT TEXT
-===================== */
-.about-text {
-  background: white;
-  border-radius: 18px;
-  padding: 26px 28px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-  font-size: 0.95rem;
-  line-height: 1.8;
-}
-
-/* =====================
-   SKILLS GRID
-===================== */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 18px;
-}
-
-.skill-card {
-  background: white;
-  border-radius: 14px;
-  padding: 18px 20px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
-  font-size: 0.9rem;
-  opacity: 0;
-  transform: translateY(25px);
-  transition: 0.5s ease;
-}
-
-.skill-card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.skill-card strong {
-  color: #0b2a4a;
-}
-
-/* =====================
-   CONTACT / RESUME
-===================== */
-.center-box {
-  background: white;
-  border-radius: 18px;
-  padding: 28px 26px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-  text-align: center;
-  font-size: 0.95rem;
-}
-
-.center-box a {
-  color: #123c6a;
-  text-decoration: none;
+  color: #1e293b;
   font-weight: 500;
 }
 
-.center-box a:hover {
+/* =====================
+   TEXT
+===================== */
+p {
+  color: #334155;
+  margin-bottom: 12px;
+}
+
+/* =====================
+   LISTS (RECTANGLE CARDS)
+===================== */
+ul {
+  list-style: none;
+  margin-top: 12px;
+}
+
+li {
+  margin: 10px 0;
+  padding: 14px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #1e40af;
+  border-radius: 8px;
+  color: #1f2937;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+
+  opacity: 0;
+  transform: translateY(18px);
+  transition: all 0.5s ease;
+}
+
+li.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =====================
+   EDUCATION CARDS
+===================== */
+.education-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #1e40af;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 22px;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.05);
+}
+
+.education-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.education-row strong {
+  color: #0f172a;
+}
+
+.education-meta {
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+/* =====================
+   LINKS
+===================== */
+a {
+  color: #1e40af;
+  text-decoration: none;
+}
+
+a:hover {
   text-decoration: underline;
+}
+
+/* =====================
+   RESUME BUTTON
+===================== */
+.resume {
+  text-align: center;
+  margin-top: 22px;
+}
+
+.resume a {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  color: white;
+  padding: 12px 26px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 0.95rem;
+  transition: 0.25s ease;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+}
+
+.resume a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* =====================
+   CONTACT
+===================== */
+.contact p {
+  margin: 10px 0;
 }
 
 /* =====================
    FOOTER
 ===================== */
 footer {
+  background: #0f1f3a;
+  color: #cbd5f5;
   text-align: center;
-  padding: 30px 15px;
-  background: #0b2a4a;
-  color: white;
+  padding: 16px;
+  margin-top: 50px;
   font-size: 0.85rem;
-  margin-top: 60px;
-  transition: 0.4s ease;
 }
 
 footer.hidden {
   display: none;
 }
-</style>
-</head>
 
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  header h1 { font-size: 2.1rem; }
+  nav button { padding: 10px 14px; font-size: 0.85rem; }
+  section { margin: 22px 12px; padding: 26px; }
+  .education-row { flex-direction: column; gap: 4px; }
+}
+  </style>
+</head>
 <body>
 
 <header id="header">
@@ -267,193 +295,157 @@ footer.hidden {
   <button onclick="showSection('contact', event)">Contact</button>
 </nav>
 
-<!-- =====================
-     HOME
-===================== -->
+<!-- HOME -->
 <section id="home" class="active">
   <h2>About Me</h2>
-
-  <div class="panel">
-    <div class="about-text card animate">
-      I am an <strong>Automotive Engineering graduate</strong> with hands-on experience in vehicle maintenance,
-      diagnostics, and mechanical systems. I enjoy learning new skills and solving real-world automotive problems.
-
-      <br><br>
-
-      I also have a strong interest in <strong>software and data-based work</strong>, especially in automotive safety,
-      simulations, and intelligent mobility. I use tools like automation, data analysis, and cloud systems to improve
-      engineering workflows.
-
-      <br><br>
-
-      My goal is to grow professionally in automotive engineering, EV systems, and mobility technologies while using
-      modern software tools to build smarter and more efficient solutions.
-    </div>
-  </div>
+  <p>
+    I am an <strong>Automotive Engineering graduate</strong> with hands-on experience in vehicle maintenance,
+    diagnostics, and mechanical systems. I enjoy learning new skills and solving real-world automotive problems.
+  </p>
+  <p>
+    I also have a strong interest in <strong>software and data-based work</strong>, especially in automotive safety,
+    simulations, and intelligent mobility. I use tools like automation, data analysis, and cloud systems to improve
+    engineering workflows.
+  </p>
+  <p>
+    My goal is to grow professionally in automotive engineering, EV systems, and mobility technologies while using
+    modern software tools to build smarter and more efficient solutions.
+  </p>
 </section>
 
-<!-- =====================
-     EDUCATION
-===================== -->
+<!-- EDUCATION -->
 <section id="education">
   <h2>Education</h2>
 
-  <div class="panel">
-
-    <!-- BSc -->
-    <div class="card animate">
+  <div class="education-card">
+    <div class="education-row">
       <strong>University of Engineering and Technology (UET), Lahore</strong>
-      <div class="meta">Lahore, Pakistan | 2022 – Present</div>
-      <div class="line-box animate">BSc Automotive Engineering (Final Year)</div>
+      <span class="education-meta">Lahore, Pakistan</span>
     </div>
+    <div class="education-row" style="margin-top:6px;">
+      <span>BSc Automotive Engineering (Final Year)</span>
+      <span class="education-meta">2022 – Present</span>
+    </div>
+  </div>
 
-    <!-- FSC -->
-    <div class="card animate">
+  <div class="education-card">
+    <div class="education-row">
       <strong>The KIMS College, Chiniot</strong>
-      <div class="meta">Chiniot, Pakistan | 2020 – 2022</div>
-      <div class="line-box animate">F.Sc Pre-Engineering (1001 / 1100)</div>
+      <span class="education-meta">Chiniot, Pakistan</span>
     </div>
-
+    <div class="education-row" style="margin-top:6px;">
+      <span>F.Sc Pre-Engineering (1001 / 1100)</span>
+      <span class="education-meta">2020 – 2022</span>
+    </div>
   </div>
 </section>
 
-<!-- =====================
-     EXPERIENCE
-===================== -->
+<!-- EXPERIENCE -->
 <section id="experience">
   <h2>Experience</h2>
 
-  <div class="panel">
+  <p><strong>Daewoo Express — Automotive Engineering Intern</strong><br>
+     <em>Lahore, Pakistan | 4 Weeks</em>
+  </p>
+  <ul>
+    <li>Worked on diesel bus engines and vehicle maintenance.</li>
+    <li>Checked braking, suspension, and transmission systems.</li>
+    <li>Found and fixed basic electrical faults.</li>
+    <li>Learned vehicle inspection and safety procedures.</li>
+  </ul>
 
-    <!-- Daewoo -->
-    <div class="card animate">
-      <strong>Daewoo Express — Automotive Engineering Intern</strong>
-      <div class="meta">Lahore, Pakistan | July 2025 – August 2025</div>
+  <br>
 
-      <div class="line-box animate">Worked on diesel bus engines and vehicle maintenance.</div>
-      <div class="line-box animate">Checked braking, suspension, and transmission systems.</div>
-      <div class="line-box animate">Diagnosed and fixed basic electrical faults.</div>
-      <div class="line-box animate">Learned vehicle inspection and safety procedures.</div>
-    </div>
-
-    <!-- Al Rehman -->
-    <div class="card animate">
-      <strong>Al Rehman Auto Workshop — Automotive Engineering Intern</strong>
-      <div class="meta">Gujranwala, Pakistan | June 2025 – July 2025</div>
-
-      <div class="line-box animate">Worked on hybrid and electric vehicle systems.</div>
-      <div class="line-box animate">Assisted in vehicle diagnostics and repairs.</div>
-      <div class="line-box animate">Helped test vehicle performance and components.</div>
-      <div class="line-box animate">Learned modern automotive and EV technologies.</div>
-    </div>
-
-  </div>
+  <p><strong>Al Rehman Auto Workshop — Automotive Engineering Intern</strong><br>
+     <em>Gujranwala, Pakistan | 4 Weeks</em>
+  </p>
+  <ul>
+    <li>Worked on hybrid and electric vehicle systems.</li>
+    <li>Assisted in vehicle diagnostics and repairs.</li>
+    <li>Helped test vehicle performance and components.</li>
+    <li>Learned modern automotive and EV technologies.</li>
+  </ul>
 </section>
 
-<!-- =====================
-     SKILLS
-===================== -->
+<!-- SKILLS -->
 <section id="skills">
   <h2>Skills</h2>
 
-  <div class="panel">
+  <h3>Engineering & Software Tools</h3>
+  <ul>
+    <li><strong>AutoCAD</strong> — 2D drafting and engineering drawings</li>
+    <li><strong>SolidWorks</strong> — 3D modeling and mechanical design</li>
+    <li><strong>ANSYS</strong> — Structural and thermal simulation analysis</li>
+    <li><strong>Plant Simulation</strong> — Manufacturing and process simulation</li>
+    <li><strong>Excel</strong> — Data analysis, calculations, and reporting</li>
+    <li><strong>PowerPoint</strong> — Technical presentations and project slides</li>
+    <li><strong>MS Office</strong> — Documentation, reports, and professional work</li>
+  </ul>
 
-    <div class="skills-grid">
-      <div class="skill-card animate"><strong>AutoCAD</strong><br>2D drafting and engineering drawings</div>
-      <div class="skill-card animate"><strong>SolidWorks</strong><br>3D modeling and mechanical design</div>
-      <div class="skill-card animate"><strong>ANSYS</strong><br>Structural and thermal simulation analysis</div>
-      <div class="skill-card animate"><strong>Plant Simulation</strong><br>Manufacturing and process simulation</div>
-      <div class="skill-card animate"><strong>Excel</strong><br>Data analysis, calculations, and reporting</div>
-      <div class="skill-card animate"><strong>PowerPoint</strong><br>Technical presentations and project slides</div>
-      <div class="skill-card animate"><strong>MS Office</strong><br>Documentation and professional reports</div>
-    </div>
-
-    <br>
-
-    <div class="skills-grid">
-      <div class="skill-card animate"><strong>Urdu</strong><br>Native / Bilingual</div>
-      <div class="skill-card animate"><strong>English</strong><br>Professional Working Proficiency</div>
-      <div class="skill-card animate"><strong>Chinese</strong><br>Elementary</div>
-    </div>
-
-  </div>
+  <h3>Languages</h3>
+  <ul>
+    <li>Urdu (Native/Bilingual)</li>
+    <li>English (Professional Working Proficiency)</li>
+    <li>Chinese (Elementary)</li>
+  </ul>
 </section>
 
-<!-- =====================
-     PROJECTS
-===================== -->
+<!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
+  <ul>
+    <li>
+      <strong>Machine Learning Based Crash Severity Injury Prediction (Final Year Project)</strong><br>
+      Built a classification model to predict accident injury severity using road crash data to support
+      transportation safety analysis and decision-making.
+    </li>
 
-  <div class="panel">
+    <li>
+      <strong>Motorcycle Electrical Wiring System Installation and Testing</strong><br>
+      Designed and tested a complete motorcycle wiring system with fault checking and safety validation.
+    </li>
 
-    <div class="card animate">
-      <strong>Machine Learning Based Crash Severity Injury Prediction (Final Year Project)</strong>
-      <div class="line-box animate">Built a classification model to predict accident injury severity using road crash data for transportation safety analysis.</div>
-    </div>
+    <li>
+      <strong>Rocker Arm Design, Simulation, and Stress Analysis</strong><br>
+      Designed mechanical components and tested strength using simulation tools.
+    </li>
 
-    <div class="card animate">
-      <strong>Motorcycle Electrical Wiring System Installation and Testing</strong>
-      <div class="line-box animate">Designed and tested a complete motorcycle wiring system with fault checking and safety validation.</div>
-    </div>
-
-    <div class="card animate">
-      <strong>Rocker Arm Design, Simulation, and Stress Analysis</strong>
-      <div class="line-box animate">Designed mechanical components and tested strength using simulation tools.</div>
-    </div>
-
-    <div class="card animate">
-      <strong>V-Belt Pulley Design, Simulation, and CNC Machining</strong>
-      <div class="line-box animate">Designed pulley systems, simulated performance, and manufactured parts using CNC machines.</div>
-    </div>
-
-  </div>
+    <li>
+      <strong>V-Belt Pulley Design, Simulation, and CNC Machining</strong><br>
+      Designed pulley systems, simulated performance, and manufactured parts using CNC machines.
+    </li>
+  </ul>
 </section>
 
-<!-- =====================
-     CERTIFICATIONS
-===================== -->
+<!-- CERTIFICATIONS -->
 <section id="certifications">
   <h2>Certifications</h2>
-
-  <div class="panel">
-
-    <div class="card animate">Mastering 5S and Kaizen — Toyota NT (Dec 2023)</div>
-    <div class="card animate">Personal Development for Planning Engineering — Open University</div>
-    <div class="card animate">Assessing Risk in Engineering, Work and Life — Open University</div>
-    <div class="card animate">Additive Manufacturing — Open University</div>
-    <div class="card animate">Developing a Business Idea for Drone Technology — Open University</div>
-    <div class="card animate">Automotive Industrial Engineering — Coursera</div>
-
-  </div>
+  <ul>
+    <li>Mastering 5S and Kaizen — Toyota NT (Dec 2023)</li>
+    <li>Personal Development for Planning Engineering — Open University</li>
+    <li>Assessing Risk in Engineering, Work and Life — Open University</li>
+    <li>Additive Manufacturing — Open University</li>
+    <li>Developing a Business Idea for Drone Technology — Open University</li>
+    <li>Automotive Industrial Engineering — Coursera</li>
+  </ul>
 </section>
 
-<!-- =====================
-     RESUME
-===================== -->
+<!-- RESUME -->
 <section id="resume">
   <h2>Resume</h2>
-
-  <div class="panel">
-    <div class="center-box card animate">
-      <a href="#" target="_blank">Download My Resume (PDF)</a>
-    </div>
+  <div class="resume">
+    <a href="#" target="_blank">Download My Resume (PDF)</a>
   </div>
 </section>
 
-<!-- =====================
-     CONTACT
-===================== -->
+<!-- CONTACT -->
 <section id="contact">
   <h2>Contact Me</h2>
-
-  <div class="panel">
-    <div class="center-box card animate">
-      <p>Phone: <a href="tel:+923255723412">+92 325 5723412</a></p>
-      <p>Email: <a href="mailto:engralishehzad503@gmail.com">engralishehzad503@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/ali-shehzad-" target="_blank">linkedin.com/in/ali-shehzad-</a></p>
-      <p>GitHub: <a href="https://github.com/alishehzad-943" target="_blank">github.com/alishehzad-943</a></p>
-    </div>
+  <div class="contact">
+    <p>Phone: <a href="tel:+923255723412">+92 325 5723412</a></p>
+    <p>Email: <a href="mailto:engralishehzad503@gmail.com">engralishehzad503@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/ali-shehzad-" target="_blank">linkedin.com/in/ali-shehzad-</a></p>
+    <p>GitHub: <a href="https://github.com/alishehzad-943" target="_blank">github.com/alishehzad-943</a></p>
   </div>
 </section>
 
@@ -462,47 +454,41 @@ footer.hidden {
 </footer>
 
 <script>
-/* =====================
-   SECTION SWITCHING
-===================== */
-function showSection(id, event) {
-  document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-  document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+  function showSection(id, event) {
+    document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+    document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
 
-  document.getElementById(id).classList.add('active');
-  event.target.classList.add('active');
+    const activeSection = document.getElementById(id);
+    activeSection.classList.add('active');
+    event.target.classList.add('active');
 
-  const header = document.getElementById('header');
-  const footer = document.getElementById('footer');
+    const header = document.getElementById('header');
+    const footer = document.getElementById('footer');
 
-  if (id === 'home') {
-    header.classList.remove('hidden');
-    footer.classList.remove('hidden');
-  } else {
-    header.classList.add('hidden');
-    footer.classList.add('hidden');
+    if (id === 'home') {
+      header.classList.remove('hidden');
+      footer.classList.remove('hidden');
+    } else {
+      header.classList.add('hidden');
+      footer.classList.add('hidden');
+    }
+
+    animateListItems(activeSection);
   }
 
-  runAnimations();
-}
+  function animateListItems(section) {
+    const items = section.querySelectorAll("li");
+    items.forEach((li, index) => {
+      li.classList.remove("show");
+      setTimeout(() => {
+        li.classList.add("show");
+      }, index * 120);
+    });
+  }
 
-/* =====================
-   SCROLL / LOAD ANIMATION
-===================== */
-function runAnimations() {
-  const elements = document.querySelectorAll('.animate');
-  let delay = 0;
-
-  elements.forEach(el => {
-    el.classList.remove('show');
-    setTimeout(() => {
-      el.classList.add('show');
-    }, delay);
-    delay += 120;
-  });
-}
-
-runAnimations();
+  window.onload = () => {
+    animateListItems(document.querySelector(".active"));
+  };
 </script>
 
 </body>
