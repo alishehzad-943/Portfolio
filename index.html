@@ -8,284 +8,284 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
   <style>
-/* =====================
-   RESET
-===================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #eef3fb, #f7f9fc);
-  color: #1e293b;
-  line-height: 1.6;
-}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #eef3fb, #f7f9fc);
+      color: #1e293b;
+      line-height: 1.7;
+    }
 
-/* =====================
-   HEADER
-===================== */
-header {
-  background: linear-gradient(135deg, #0f1f3a, #162c4f);
-  color: #ffffff;
-  text-align: center;
-  padding: 80px 20px 60px;
-}
+    /* ---------- HEADER ---------- */
+    header {
+      background: linear-gradient(135deg, #0f1f3a, #162c4f);
+      color: #ffffff;
+      text-align: center;
+      padding: 80px 20px 60px;
+    }
 
-header.hidden {
-  display: none;
-}
+    header.hidden {
+      display: none;
+    }
 
-header h1 {
-  font-size: 3rem;
-  font-weight: 600;
-}
+    header h1 {
+      font-size: 3rem;
+      font-weight: 600;
+    }
 
-.subtitle-box {
-  display: inline-block;
-  margin-top: 14px;
-  padding: 8px 22px;
-  background: #0b1d3a;
-  border-radius: 8px;
-  font-size: 1.05rem;
-  letter-spacing: 0.4px;
-  color: #e0e7ff;
-}
+    .subtitle-box {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 8px 22px;
+      background: #0b1d3a;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      letter-spacing: 0.4px;
+      color: #e0e7ff;
+    }
 
-/* =====================
-   NAVBAR
-===================== */
-nav {
-  background: #ffffff;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  border-bottom: 1px solid #e2e8f0;
-}
+    /* ---------- NAVBAR ---------- */
+    nav {
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #e2e8f0;
+    }
 
-nav button {
-  background: transparent;
-  border: none;
-  color: #334155;
-  font-size: 0.95rem;
-  padding: 14px 20px;
-  cursor: pointer;
-  transition: 0.25s ease;
-  position: relative;
-  border-radius: 6px;
-}
+    nav button {
+      background: transparent;
+      border: none;
+      color: #334155;
+      font-size: 0.95rem;
+      padding: 14px 20px;
+      cursor: pointer;
+      transition: 0.25s ease;
+      border-radius: 6px;
+    }
 
-nav button:hover {
-  background: #eef2ff;
-  color: #1e40af;
-}
+    nav button:hover {
+      background: #eef2ff;
+      color: #1e40af;
+    }
 
-nav button.active {
-  background: linear-gradient(135deg, #1e40af, #2563eb);
-  color: #ffffff;
-  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.25);
-}
+    nav button.active {
+      background: linear-gradient(135deg, #1e40af, #2563eb);
+      color: #ffffff;
+      box-shadow: 0 6px 14px rgba(37, 99, 235, 0.25);
+    }
 
-/* =====================
-   SECTIONS
-===================== */
-section {
-  display: none;
-  max-width: 1000px;
-  margin: 45px auto;
-  background: #ffffff;
-  padding: 42px 44px;
-  border-radius: 14px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
-  animation: fade 0.4s ease;
-}
+    /* ---------- SECTIONS ---------- */
+    section {
+      display: none;
+      max-width: 1000px;
+      margin: 45px auto;
+      background: #ffffff;
+      padding: 42px 44px;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
+      animation: fade 0.4s ease;
+    }
 
-@keyframes fade {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-section.active {
-  display: block;
-}
+    section.active {
+      display: block;
+    }
 
-/* =====================
-   HEADINGS
-===================== */
-h2 {
-  color: #0f172a;
-  margin-bottom: 18px;
-  font-weight: 600;
-  position: relative;
-  padding-bottom: 10px;
-}
+    /* ---------- HEADINGS ---------- */
+    h2 {
+      color: #0f172a;
+      margin-bottom: 18px;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 10px;
+    }
 
-h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 56px;
-  height: 3px;
-  background: linear-gradient(90deg, #1e40af, #3b82f6);
-  border-radius: 3px;
-}
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 56px;
+      height: 3px;
+      background: linear-gradient(90deg, #1e40af, #3b82f6);
+      border-radius: 3px;
+    }
 
-/* =====================
-   TEXT
-===================== */
-p {
-  color: #334155;
-  margin-bottom: 12px;
-}
+    p {
+      color: #334155;
+      margin-bottom: 12px;
+      text-align: justify;
+    }
 
-/* =====================
-   RECTANGLE CARDS (VERTICAL)
-===================== */
-.card {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-left: 5px solid #1e40af;
-  border-radius: 12px;
-  padding: 18px 20px;
-  margin-bottom: 22px;
-  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.05);
+    /* ---------- EXPERIENCE / PROJECT CARDS ---------- */
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 5px solid #1e40af;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 22px;
+      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.05);
 
-  opacity: 0;
-  transform: translateY(18px);
-  transition: all 0.5s ease;
-}
+      opacity: 0;
+      transform: translateY(18px);
+      transition: all 0.5s ease;
+    }
 
-.card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-.card-title {
-  font-weight: 600;
-  color: #0f172a;
-  margin-bottom: 4px;
-}
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
 
-.card-meta {
-  font-size: 0.85rem;
-  color: #475569;
-  margin-bottom: 10px;
-}
+    .card-left {
+      font-weight: 600;
+      color: #0f172a;
+    }
 
-.card ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 10px;
-}
+    .card-right {
+      font-size: 0.9rem;
+      color: #475569;
+      white-space: nowrap;
+    }
 
-.card li {
-  background: #ffffff;
-  border-left: 3px solid #1e40af;
-  padding: 10px 12px;
-  border-radius: 6px;
-  margin-bottom: 8px;
-  font-size: 0.9rem;
-  color: #334155;
-  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
-}
+    .card-subtitle {
+      font-weight: 500;
+      color: #334155;
+      margin-bottom: 8px;
+    }
 
-/* =====================
-   EDUCATION
-===================== */
-.education-card {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-left: 5px solid #1e40af;
-  border-radius: 12px;
-  padding: 18px 20px;
-  margin-bottom: 22px;
-  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.05);
-}
+    .card ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin-top: 6px;
+    }
 
-.education-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-}
+    .card li {
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+      color: #334155;
+    }
 
-.education-row strong {
-  color: #0f172a;
-}
+    /* ---------- EDUCATION ---------- */
+    .education-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 5px solid #1e40af;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 22px;
+      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.05);
+    }
 
-.education-meta {
-  color: #475569;
-  font-size: 0.9rem;
-}
+    .education-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
-/* =====================
-   LINKS
-===================== */
-a {
-  color: #1e40af;
-  text-decoration: none;
-}
+    .education-left {
+      font-weight: 600;
+      color: #0f172a;
+    }
 
-a:hover {
-  text-decoration: underline;
-}
+    .education-right {
+      font-size: 0.9rem;
+      color: #475569;
+      white-space: nowrap;
+    }
 
-/* =====================
-   RESUME BUTTON
-===================== */
-.resume {
-  text-align: center;
-  margin-top: 22px;
-}
+    .education-subtitle {
+      margin-top: 6px;
+      font-weight: 500;
+      color: #334155;
+    }
 
-.resume a {
-  background: linear-gradient(135deg, #1e40af, #2563eb);
-  color: white;
-  padding: 12px 26px;
-  border-radius: 8px;
-  display: inline-block;
-  font-size: 0.95rem;
-  transition: 0.25s ease;
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
-}
+    /* ---------- LINKS ---------- */
+    a {
+      color: #1e40af;
+      text-decoration: none;
+    }
 
-.resume a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
-}
+    a:hover {
+      text-decoration: underline;
+    }
 
-/* =====================
-   FOOTER
-===================== */
-footer {
-  background: #0f1f3a;
-  color: #cbd5f5;
-  text-align: center;
-  padding: 16px;
-  margin-top: 50px;
-  font-size: 0.85rem;
-}
+    /* ---------- RESUME ---------- */
+    .resume {
+      text-align: center;
+      margin-top: 22px;
+    }
 
-footer.hidden {
-  display: none;
-}
+    .resume a {
+      background: linear-gradient(135deg, #1e40af, #2563eb);
+      color: white;
+      padding: 12px 26px;
+      border-radius: 8px;
+      display: inline-block;
+      font-size: 0.95rem;
+      transition: 0.25s ease;
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+    }
 
-/* =====================
-   RESPONSIVE
-===================== */
-@media (max-width: 768px) {
-  header h1 { font-size: 2.2rem; }
-  nav button { padding: 10px 14px; font-size: 0.85rem; }
-  section { margin: 22px 12px; padding: 26px; }
-  .education-row { flex-direction: column; gap: 4px; }
-}
+    .resume a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .contact-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 5px solid #1e40af;
+      border-radius: 12px;
+      padding: 14px 16px;
+      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.05);
+    }
+
+    footer {
+      display: none;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      nav button { padding: 10px 14px; font-size: 0.85rem; }
+      section { margin: 22px 12px; padding: 26px; }
+      .card-header { flex-direction: column; gap: 4px; }
+      .card-right { align-self: flex-start; }
+      .education-header { flex-direction: column; gap: 4px; }
+      .education-right { align-self: flex-start; }
+    }
   </style>
 </head>
 <body>
@@ -310,45 +310,18 @@ footer.hidden {
 <section id="home" class="active">
   <h2>About Me</h2>
   <p>
-    I am an <strong>Automotive Engineering graduate</strong> with hands-on experience in vehicle maintenance,
+    I am an Automotive Engineering graduate with hands-on experience in vehicle maintenance,
     diagnostics, and mechanical systems. I enjoy learning new skills and solving real-world automotive problems.
   </p>
   <p>
-    I also have a strong interest in <strong>software and data-based work</strong>, especially in automotive safety,
-    simulations, and intelligent mobility. I use tools like automation, data analysis, and cloud systems to improve
+    I also have a strong interest in software and data-driven work, especially in automotive safety,
+    simulations, and intelligent mobility. I use automation, data analysis, and cloud-based tools to improve
     engineering workflows.
   </p>
   <p>
-    My goal is to grow professionally in automotive engineering, EV systems, and mobility technologies while using
-    modern software tools to build smarter and more efficient solutions.
+    My goal is to grow professionally in automotive engineering, EV systems, and mobility technologies while
+    applying modern digital tools to build smarter and more efficient solutions.
   </p>
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-  <h2>Education</h2>
-
-  <div class="education-card">
-    <div class="education-row">
-      <strong>University of Engineering and Technology (UET), Lahore</strong>
-      <span class="education-meta">Lahore, Pakistan</span>
-    </div>
-    <div class="education-row" style="margin-top:6px;">
-      <span>BSc Automotive Engineering (Final Year)</span>
-      <span class="education-meta">2022 – Present</span>
-    </div>
-  </div>
-
-  <div class="education-card">
-    <div class="education-row">
-      <strong>The KIMS College, Chiniot</strong>
-      <span class="education-meta">Chiniot, Pakistan</span>
-    </div>
-    <div class="education-row" style="margin-top:6px;">
-      <span>F.Sc Pre-Engineering (1001 / 1100)</span>
-      <span class="education-meta">2020 – 2022</span>
-    </div>
-  </div>
 </section>
 
 <!-- EXPERIENCE -->
@@ -356,24 +329,63 @@ footer.hidden {
   <h2>Experience</h2>
 
   <div class="card">
-    <div class="card-title">Daewoo Express — Automotive Engineering Intern</div>
-    <div class="card-meta">Lahore, Pakistan | July 2025 – August 2025</div>
+    <div class="card-header">
+      <div class="card-left">Automotive Engineering Intern</div>
+      <div class="card-right">Lahore, Pakistan | Jul 2025 – Aug 2025</div>
+    </div>
+    <div class="card-subtitle">Daewoo Express</div>
     <ul>
-      <li>Worked on diesel bus engines and vehicle maintenance.</li>
-      <li>Checked braking, suspension, and transmission systems.</li>
-      <li>Diagnosed and fixed basic electrical faults.</li>
+      <li>Worked on diesel bus engines and preventive maintenance.</li>
+      <li>Inspected braking, suspension, and transmission systems.</li>
+      <li>Diagnosed and resolved basic electrical faults.</li>
       <li>Learned vehicle inspection and safety procedures.</li>
     </ul>
   </div>
 
   <div class="card">
-    <div class="card-title">Al Rehman Auto Workshop — Automotive Engineering Intern</div>
-    <div class="card-meta">Gujranwala, Pakistan | June 2025 – July 2025</div>
+    <div class="card-header">
+      <div class="card-left">Automotive Engineering Intern</div>
+      <div class="card-right">Gujranwala, Pakistan | Jun 2025 – Jul 2025</div>
+    </div>
+    <div class="card-subtitle">Al Rehman Auto Workshop</div>
     <ul>
       <li>Worked on hybrid and electric vehicle systems.</li>
-      <li>Assisted in vehicle diagnostics and repairs.</li>
+      <li>Assisted in vehicle diagnostics and repair workflows.</li>
       <li>Helped test vehicle performance and components.</li>
       <li>Learned modern automotive and EV technologies.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    Crash Severity Injury Prediction (Final Year Project)
+    <ul>
+      <li>Built a machine learning classification model to predict accident injury severity using real crash datasets.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    Motorcycle Electrical Wiring System Installation and Testing
+    <ul>
+      <li>Designed and tested a complete motorcycle wiring system with fault detection and safety validation.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    Rocker Arm Design, Simulation, and Stress Analysis
+    <ul>
+      <li>Designed mechanical components and validated structural strength using simulation tools.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    V-Belt Pulley Design, Simulation, and CNC Machining
+    <ul>
+      <li>Designed pulley systems, simulated performance, and manufactured parts using CNC machines.</li>
     </ul>
   </div>
 </section>
@@ -384,39 +396,35 @@ footer.hidden {
 
   <div class="card">
     <ul>
-      <li><strong>AutoCAD</strong> — 2D drafting and engineering drawings</li>
-      <li><strong>SolidWorks</strong> — 3D modeling and mechanical design</li>
-      <li><strong>ANSYS</strong> — Structural and thermal simulation analysis</li>
-      <li><strong>Plant Simulation</strong> — Manufacturing and process simulation</li>
-      <li><strong>Excel</strong> — Data analysis, calculations, and reporting</li>
-      <li><strong>PowerPoint</strong> — Technical presentations and project slides</li>
-      <li><strong>MS Office</strong> — Documentation, reports, and professional work</li>
+      <li>AutoCAD — 2D drafting and engineering drawings</li>
+      <li>SolidWorks — 3D modeling and mechanical design</li>
+      <li>ANSYS — Structural and thermal simulation analysis</li>
+      <li>Plant Simulation — Manufacturing and process simulation</li>
+      <li>Excel — Data analysis, calculations, and reporting</li>
+      <li>PowerPoint — Technical presentations and project slides</li>
+      <li>MS Office — Documentation, reports, and professional work</li>
     </ul>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <h2>Projects</h2>
+<!-- EDUCATION -->
+<section id="education">
+  <h2>Education</h2>
 
-  <div class="card">
-    <div class="card-title">Crash Severity Injury Prediction (Final Year Project)</div>
-    <div class="card-desc">Built a machine learning classification model to predict accident injury severity using real crash datasets.</div>
+  <div class="education-card">
+    <div class="education-header">
+      <div class="education-left">BSc Automotive Engineering</div>
+      <div class="education-right">Lahore, Pakistan | 2022 – 2026 (Final Semester)</div>
+    </div>
+    <div class="education-subtitle">University of Engineering and Technology (UET), Lahore</div>
   </div>
 
-  <div class="card">
-    <div class="card-title">Motorcycle Electrical Wiring System Installation and Testing</div>
-    <div class="card-desc">Designed and tested a complete motorcycle wiring system with fault detection and safety validation.</div>
-  </div>
-
-  <div class="card">
-    <div class="card-title">Rocker Arm Design, Simulation, and Stress Analysis</div>
-    <div class="card-desc">Designed mechanical components and validated structural strength using simulation tools.</div>
-  </div>
-
-  <div class="card">
-    <div class="card-title">V-Belt Pulley Design, Simulation, and CNC Machining</div>
-    <div class="card-desc">Designed pulley systems, simulated performance, and manufactured parts using CNC machines.</div>
+  <div class="education-card">
+    <div class="education-header">
+      <div class="education-left">F.Sc Pre-Engineering</div>
+      <div class="education-right">Chiniot, Pakistan | 2020 – 2022</div>
+    </div>
+    <div class="education-subtitle">The KIMS College, Chiniot</div>
   </div>
 </section>
 
@@ -424,12 +432,12 @@ footer.hidden {
 <section id="certifications">
   <h2>Certifications</h2>
 
-  <div class="card"><strong>Mastering 5S and Kaizen</strong> — Toyota NT (Dec 2023)</div>
-  <div class="card"><strong>Personal Development for Planning Engineering</strong> — Open University</div>
-  <div class="card"><strong>Assessing Risk in Engineering, Work and Life</strong> — Open University</div>
-  <div class="card"><strong>Additive Manufacturing</strong> — Open University</div>
-  <div class="card"><strong>Developing a Business Idea for Drone Technology</strong> — Open University</div>
-  <div class="card"><strong>Automotive Industrial Engineering</strong> — Coursera</div>
+  <div class="card">Mastering 5S and Kaizen — Toyota NT (Dec 2023)</div>
+  <div class="card">Personal Development for Planning Engineering — Open University</div>
+  <div class="card">Assessing Risk in Engineering, Work and Life — Open University</div>
+  <div class="card">Additive Manufacturing — Open University</div>
+  <div class="card">Developing a Business Idea for Drone Technology — Open University</div>
+  <div class="card">Automotive Industrial Engineering — Coursera</div>
 </section>
 
 <!-- RESUME -->
@@ -444,15 +452,30 @@ footer.hidden {
 <section id="contact">
   <h2>Contact Me</h2>
 
-  <div class="card"><strong>Phone:</strong> <a href="tel:+923255723412">+92 325 5723412</a></div>
-  <div class="card"><strong>Email:</strong> <a href="mailto:engralishehzad503@gmail.com">engralishehzad503@gmail.com</a></div>
-  <div class="card"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ali-shehzad-" target="_blank">linkedin.com/in/ali-shehzad-</a></div>
-  <div class="card"><strong>GitHub:</strong> <a href="https://github.com/alishehzad-943" target="_blank">github.com/alishehzad-943</a></div>
+  <div class="contact-grid">
+    <div class="contact-box">
+      Phone / WhatsApp:
+      <a href="https://wa.me/923255723412" target="_blank">+92 325 5723412</a>
+    </div>
+
+    <div class="contact-box">
+      Email:
+      <a href="mailto:engralishehzad503@gmail.com">engralishehzad503@gmail.com</a>
+    </div>
+
+    <div class="contact-box">
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/ali-shehzad-" target="_blank">linkedin.com/in/ali-shehzad-</a>
+    </div>
+
+    <div class="contact-box">
+      GitHub:
+      <a href="https://github.com/alishehzad-943" target="_blank">github.com/alishehzad-943</a>
+    </div>
+  </div>
 </section>
 
-<footer id="footer">
-  © 2026 Ali Shehzad | Automotive Engineering Portfolio
-</footer>
+<footer id="footer"></footer>
 
 <script>
   function showSection(id, event) {
@@ -478,7 +501,7 @@ footer.hidden {
   }
 
   function animateCards(section) {
-    const cards = section.querySelectorAll(".card");
+    const cards = section.querySelectorAll(".card, .education-card");
     cards.forEach((card, index) => {
       card.classList.remove("show");
       setTimeout(() => {
